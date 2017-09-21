@@ -24,22 +24,25 @@
         }
     }
 }
-<h3>Login</h3>
-<form action="Get_User" method="POST">
+<br>
 
-<div class="form-group">
-    <label for="email">Email:</label>
-    <input asp-for="email" type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-    <span asp-validation-for="email"></span>
-    </div>
+    <div class="jumbotron">
+       <h3>Login</h3><br>
+            <form action="Get_User" method="POST">
 
-<div class="form-group">
-    <label for="password">Password:</label>
-    <input asp-for="password" type="password" name="password" class="form-control" placeholder="Password"><br>
-    <span asp-validation-for="password"></span>
-</div>
-    <input type="submit" name="Login">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input asp-for="email" type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <span asp-validation-for="email"></span>
+                </div>
 
-</form>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input asp-for="password" type="password" name="password" class="form-control" placeholder="Password"><br>
+                <span asp-validation-for="password"></span>
+            </div>
+                <input class="btn btn-primary btn-small" role="button" type="submit" name="Login">
 
-    <a href="Register"><button>Realized You're Not A User? Click To Register</button></a>
+            </form>
+        <br><a class="btn btn-primary btn-small" href="Register" role="button">Realized You're Not A User? Click To Register</a>
+      </div>

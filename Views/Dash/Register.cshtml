@@ -10,7 +10,7 @@
       <a class="nav-item nav-link" href="Login">Sign In</a>
     </div>
   </div>
-</nav>
+</nav><br>
 
 
 @model userDashboardASP.Models.ValidateViewModel
@@ -18,45 +18,59 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
+<div class="jumbotron">
 <h1>Register</h1>
 <form action="Register" method="POST">
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
+<div class="form-group">
     <label for="firstName">First Name:</label>
-    <input asp-for="firstName" type="text" name="firstName">
+    <input asp-for="firstName" type="text" name="firstName" class="form-control">
     <span asp-validation-for="firstName"></span>
+    
+    </div>
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
-
+<div class="form-group">
     <label for="lastName">Last Name:</label>
-    <input asp-for="lastName" type="text" name="lastName">
+    <input asp-for="lastName" type="text" name="lastName" class="form-control">
     <span asp-validation-for="lastName"></span>
+    
+    </div>
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
-
+<div class="form-group">
     <label for="email">Email:</label>
-    <input asp-for="email" type="text" name="email">
+    <input asp-for="email" type="text" name="email" class="form-control">
     <span asp-validation-for="email"></span>
+    
+    </div>
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
-
+<div class="form-group">
     <label for="password">Password:</label>
-    <input asp-for="password" type="password" name="password">
+    <input asp-for="password" type="password" name="password" class="form-control">
     <span asp-validation-for="password"></span>
+    
+    </div>
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
-
+<div class="form-group">
     <label for="confirmPassword">Confirm Password:</label>
-    <input asp-for="confirmPassword" type="password" name="confirmPassword"><br>
+    <input asp-for="confirmPassword" type="password" name="confirmPassword" class="form-control"><br>
     <span asp-validation-for="confirmPassword"></span>
+    
+    </div>
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
 
-    <input type="submit" name="submit">
+   <button type="submit" class="btn btn-primary">Submit</button>
     
 <!-- ======================================================================================== -->
 <!-- ======================================================================================== -->
     
 </form>
 
-<a href="Login"><button>Or Click Here To Login</button></a>
+<br><a href="Login" class="btn btn-primary btn-small" role="button">Or Click Here To Login</a>
+</div>
