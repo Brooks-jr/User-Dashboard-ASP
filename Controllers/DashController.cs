@@ -56,11 +56,11 @@ namespace userDashboardASP.Controllers
         {
             List<Person> AllUsers = _context.User.ToList();
             string level = "";
-            if(AllUsers == null)
+            if(AllUsers.Count == 0)
             {
                 level = "Admin";
             }
-            if(AllUsers != null)
+            else
             {
                 level = "Normal";
             }
@@ -133,7 +133,7 @@ namespace userDashboardASP.Controllers
         
         [HttpGet]
         [Route("Dash")]
-        public IActionResult Users()
+        public IActionResult Dash()
         {
             int? userId = HttpContext.Session.GetInt32("currentUserId");
             Person currentUser = _context.User.SingleOrDefault(user => user.id == userId);
